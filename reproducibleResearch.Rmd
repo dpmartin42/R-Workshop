@@ -1,0 +1,115 @@
+Using R Markdown with RStudio
+========================================================
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring web pages (click the **MD** toolbar button for help on Markdown).
+
+When you click the **Knit HTML** button a web page will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+summary(cars)
+```
+
+You can also embed plots, for example:
+
+```{r fig.width=7, fig.height=6}
+plot(cars)
+```
+
+Markdown Basics (taken from RStudio site)
+-------------------
+
+Use an asterisk mark to provide emphasis such as *italics* and **bold**.
+
+Create lists with a dash:
+- Item 1
+- Item 2
+- Item 3
+
+You can write `in-line` code with a back-tick.
+
+```
+Code blocks display 
+with fixed-width font
+```
+
+> Blockquotes are offset
+
+Note that the toolbar provides some usefile tools for working with R Markdown:
+
+* **Quick Reference** - Click the **MD** toolbar button to open a quick reference quide for Markdown.
+* **Knit HTML** - Click to knit the current document to HTML, see the **Knitting to HTML** section below for more details.
+* **Run** - Run the current line or selection of lines in the console. This allows running R code inside a code chunk similar to a normal R sourch file.
+* **Chunks** - The chunks menu provides assistance with inserting, running, and chunk navigation.
+
+Embedding R Code Chunks
+-------------------------
+
+Within an R Markdown file, R code chunks can be embedded using the native Markdown syntax for code regions
+
+```{r chunkLabel}
+# R code goes here
+```
+
+For example, the following code chunk computes a data summary and renders a plot as a PNG image. It then embeds the results within a standalone HTML file:
+
+```{r qplot, fig.width = 4, fig.height = 3, message = FALSE}
+# quick summary and plot
+require(ggplot2)
+summary(cars)
+qplot(speed, dist, data = cars) + geom_smooth()
+```
+
+Creating APA-style tables using stargazer
+--------------------------
+
+You can also create APA-style tables using the stargazer package in R
+
+```{r message = FALSE}
+# install.packages("stargazer")
+
+require(stargazer)
+
+myModel <- lm(speed ~ dist, data = cars)
+summary(myModel)
+
+par(mfrow = c(2,2))
+plot(myModel)
+
+```
+
+```{r, results = 'asis'}
+
+stargazer(myModel, title = "Regression Results", type = "html")
+
+```
+
+Embedding Inline R Code
+--------------------------
+
+You can also evaluate R expressions inline by enclosing the expression within a single back-tick qualified with 'r'. For example, the following code:
+
+```{r embed}
+# I counted `r 1 + 1` red trucks on the highway.
+```
+
+Results in this output: I counted `r 1 + 1` red trucks on the highway.
+
+Navigating Between Chunks
+--------------------------
+
+A popup navigation menu is located at the bottom of the editor based on the chunk labels (optional) in your Rmd file. This makes editing and navigating between chunks easy.
+
+Using the Chunk Menu
+---------------------
+
+The Chunk Menu makes it easy to insert new chunks and execute R code from within an R Markdown document.
+
+* **Insert Chunk** - Inserts the basic syntax for an embedded R code chunk
+* **Jump To...** - Opens the Chunk Navigation Menu to jump to a specific code chunk.
+* **Run Current/Next Chunk** - Runs the current (or next) code chunk based on the cursor position. You can use this to iteratively step through code chunks one-by-one to test your R code. This interacts with the console and acts upon the current global environment.
+* **Run All** - Run all R code chunks in the current document.
+
+
+
+
+
