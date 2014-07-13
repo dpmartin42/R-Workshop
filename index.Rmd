@@ -73,22 +73,26 @@ My goal today is to focus on *your* needs as applied researchers
 
 --- 
 
-## Some cool examples
-## Interactive plots with Shiny
+## Some helpful R resources for reference
 
-[SPR Cup Global Health Project](https://dpmartin42.shinyapps.io/App-1/)
+* google!
+* [R-bloggers](http://www.r-bloggers.com/)
+* [Stack Overflow](http://stackoverflow.com/)
+* [Quick-R](http://www.statmethods.net/)
+* [An R tutorial](http://www.cyclismo.org/tutorial/R/)
+* [A ggplot2 tutorial](http://www.ling.upenn.edu/~joseff/avml2012/)
 
 --- 
 
-## Some cool examples
-# Interactive plots with Shiny
+## R Examples: Shiny
+
+[SPR Cup Global Health Project](https://dpmartin42.shinyapps.io/App-1/)
 
 [Dialect Maps](http://spark.rstudio.com/jkatz/SurveyMaps/)
 
 --- 
 
-## Some cool examples
-# Interactive plots with googleVis
+## R Examples: googleVis
 
 ```{r, echo = FALSE, results = 'asis', message = FALSE}
 
@@ -101,8 +105,7 @@ print(M1, tag = 'chart')
 
 ---
 
-## Some cool examples
-# Interactive plots with googleVis
+## R Examples: googleVis
 
 ```{r, echo = FALSE, results = 'asis', message = FALSE}
 
@@ -121,11 +124,11 @@ print(M2, tag = 'chart')
 
 ---
 
-## Before we get started...
+## OK! Before we get started...
 
 1. Download the latest version of R for your operating system
 2. Install R Studio
-3. Download the materials from ???
+3. Download the materials from https://github.com/dpmartin42/R-Workshop
 
 
 

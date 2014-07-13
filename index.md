@@ -11,7 +11,7 @@ mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 github:
   user: dpmartin42
-  repo: R-Workshop
+  repo: R-Intro
 ---
 
 ## Overview
@@ -73,32 +73,36 @@ My goal today is to focus on *your* needs as applied researchers
 
 --- 
 
-## Some cool examples
-## Interactive plots with Shiny
+## Some helpful R resources for reference
 
-[SPR Cup Global Health Project](https://dpmartin42.shinyapps.io/App-1/)
+* google!
+* [R-bloggers](http://www.r-bloggers.com/)
+* [Stack Overflow](http://stackoverflow.com/)
+* [Quick-R](http://www.statmethods.net/)
+* [An R tutorial](http://www.cyclismo.org/tutorial/R/)
+* [A ggplot2 tutorial](http://www.ling.upenn.edu/~joseff/avml2012/)
 
 --- 
 
-## Some cool examples
-# Interactive plots with Shiny
+## R Examples: Interactive plots with Shiny
+
+[SPR Cup Global Health Project](https://dpmartin42.shinyapps.io/App-1/)
 
 [Dialect Maps](http://spark.rstudio.com/jkatz/SurveyMaps/)
 
 --- 
 
-## Some cool examples
-# Interactive plots with googleVis
+## R Examples: Interactive plots with googleVis
 
 <!-- MotionChart generated in R 3.1.1 by googleVis 0.5.3 package -->
-<!-- Sat Jul 12 23:58:26 2014 -->
+<!-- Sun Jul 13 00:10:30 2014 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataMotionChartID1131dcc4c407 () {
+function gvisDataMotionChartID1136647772f92 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -196,14 +200,14 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartMotionChartID1131dcc4c407() {
-var data = gvisDataMotionChartID1131dcc4c407();
+function drawChartMotionChartID1136647772f92() {
+var data = gvisDataMotionChartID1136647772f92();
 var options = {};
-options["width"] =    600;
-options["height"] =    500;
+options["width"] =    550;
+options["height"] =    350;
 
     var chart = new google.visualization.MotionChart(
-    document.getElementById('MotionChartID1131dcc4c407')
+    document.getElementById('MotionChartID1136647772f92')
     );
     chart.draw(data,options);
     
@@ -227,9 +231,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartMotionChartID1131dcc4c407);
+callbacks.push(drawChartMotionChartID1136647772f92);
 })();
-function displayChartMotionChartID1131dcc4c407() {
+function displayChartMotionChartID1136647772f92() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -253,29 +257,28 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartMotionChartID1131dcc4c407"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartMotionChartID1136647772f92"></script>
  
 <!-- divChart -->
   
-<div id="MotionChartID1131dcc4c407" 
-  style="width: 600; height: 500;">
+<div id="MotionChartID1136647772f92" 
+  style="width: 550; height: 350;">
 </div>
 
 
 ---
 
-## Some cool examples
-# Interactive plots with googleVis
+## R Examples: Interactive plots with googleVis
 
 <!-- GeoChart generated in R 3.1.1 by googleVis 0.5.3 package -->
-<!-- Sat Jul 12 23:58:26 2014 -->
+<!-- Sun Jul 13 00:10:30 2014 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataGeoChartID1131d4a21ae1d () {
+function gvisDataGeoChartID1136661d43ee5 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -487,17 +490,17 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartGeoChartID1131d4a21ae1d() {
-var data = gvisDataGeoChartID1131d4a21ae1d();
+function drawChartGeoChartID1136661d43ee5() {
+var data = gvisDataGeoChartID1136661d43ee5();
 var options = {};
-options["width"] =    600;
-options["height"] =    400;
+options["width"] =    550;
+options["height"] =    350;
 options["region"] = "US";
 options["displayMode"] = "regions";
 options["resolution"] = "provinces";
 
     var chart = new google.visualization.GeoChart(
-    document.getElementById('GeoChartID1131d4a21ae1d')
+    document.getElementById('GeoChartID1136661d43ee5')
     );
     chart.draw(data,options);
     
@@ -521,9 +524,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartGeoChartID1131d4a21ae1d);
+callbacks.push(drawChartGeoChartID1136661d43ee5);
 })();
-function displayChartGeoChartID1131d4a21ae1d() {
+function displayChartGeoChartID1136661d43ee5() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -547,22 +550,22 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartGeoChartID1131d4a21ae1d"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartGeoChartID1136661d43ee5"></script>
  
 <!-- divChart -->
   
-<div id="GeoChartID1131d4a21ae1d" 
-  style="width: 600; height: 400;">
+<div id="GeoChartID1136661d43ee5" 
+  style="width: 550; height: 350;">
 </div>
 
 
 ---
 
-## Before we get started...
+## OK! Before we get started...
 
 1. Download the latest version of R for your operating system
 2. Install R Studio
-3. Download the materials from ???
+3. Download the materials from https://github.com/dpmartin42/R-Workshop
 
 
 
