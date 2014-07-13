@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>An Introduction to R</title>
+  <meta charset="utf-8">
+  <meta name="description" content="An Introduction to R">
+  <meta name="author" content="Dan Martin">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>An Introduction to R</h1>
+    <h2></h2>
+    <p>Dan Martin<br/></p>
+  </hgroup>
+    <a href="https://github.com/dpmartin42/R-Workshop/zipball/gh-pages" class="example">
+     Download
+    </a>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Overview</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li><p>What is R?</p></li>
+<li><p>Basic Commands</p></li>
+<li><p>Cleaning</p></li>
+<li><p>Plotting</p></li>
+<li><p>Reproducible Research </p></li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>What is R</h2>
+  </hgroup>
+  <article data-timings="">
+    <h1><a href="http://cran.r-project.org">http://cran.r-project.org</a></h1>
+
+<ul>
+<li>A statistical language</li>
+<li>A programming language</li>
+<li>Object-oriented
+
+<ul>
+<li>everything is an object in R</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Why use R?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>It&#39;s free!</li>
+<li>It&#39;s open source
+
+<ul>
+<li>You can see, re-use, and modify code as needed</li>
+</ul></li>
+<li>It&#39;s flexible</li>
+<li>Access to &gt; 5000 packages</li>
+<li>Can easily create data products</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>A major con...</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>It&#39;s tough!</li>
+</ul>
+
+<p>My goal today is to focus on <em>your</em> needs as applied researchers</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Some useful R packages for reference</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Any type of general linear model: Base</li>
+<li>Logistic Regression: glm</li>
+<li>Structural equation modeling: OpenMx, lavaan</li>
+<li>Multi-level models: lme4, nlme</li>
+<li>Latent Class/Profile Analysis: poLCA, mClust</li>
+<li>Survey Weights: survey</li>
+<li>Propensity Scores: Matching, MatchIt</li>
+<li>Multiple Imputation: mice</li>
+<li>Graphics: ggplot</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>Some cool examples</h2>
+  </hgroup>
+  <article data-timings="">
+    <h1>Interactive plots with Shiny</h1>
+
+<p><a href="https://dpmartin42.shinyapps.io/App-1/">SPR Cup Global Health Project</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>Some cool examples</h2>
+  </hgroup>
+  <article data-timings="">
+    <h1>Interactive plots with Shiny</h1>
+
+<p><a href="http://spark.rstudio.com/jkatz/SurveyMaps/">Dialect Maps</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>Some cool examples</h2>
+  </hgroup>
+  <article data-timings="">
+    <h1>Interactive plots with googleVis</h1>
+
+<!-- MotionChart generated in R 3.1.1 by googleVis 0.5.3 package -->
+
+<!-- Sat Jul 12 23:52:23 2014 -->
+
+<!-- jsHeader -->
+
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataMotionChartID112d561737d19 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ "Apples",
+new Date(2008,11,31),
+2008,
+"West",
+98,
+78,
+20 
+],
+[
+ "Apples",
+new Date(2009,11,31),
+2009,
+"West",
+111,
+79,
+32 
+],
+[
+ "Apples",
+new Date(2010,11,31),
+2010,
+"West",
+89,
+76,
+13 
+],
+[
+ "Oranges",
+new Date(2008,11,31),
+2008,
+"East",
+96,
+81,
+15 
+],
+[
+ "Bananas",
+new Date(2008,11,31),
+2008,
+"East",
+85,
+76,
+9 
+],
+[
+ "Oranges",
+new Date(2009,11,31),
+2009,
+"East",
+93,
+80,
+13 
+],
+[
+ "Bananas",
+new Date(2009,11,31),
+2009,
+"East",
+94,
+78,
+16 
+],
+[
+ "Oranges",
+new Date(2010,11,31),
+2010,
+"East",
+98,
+91,
+7 
+],
+[
+ "Bananas",
+new Date(2010,11,31),
+2010,
+"East",
+81,
+71,
+10 
+] 
+];
+data.addColumn('string','Fruit');
+data.addColumn('date','Date');
+data.addColumn('number','Year');
+data.addColumn('string','Location');
+data.addColumn('number','Sales');
+data.addColumn('number','Expenses');
+data.addColumn('number','Profit');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartMotionChartID112d561737d19() {
+var data = gvisDataMotionChartID112d561737d19();
+var options = {};
+options["width"] =    600;
+options["height"] =    500;
+
+    var chart = new google.visualization.MotionChart(
+    document.getElementById('MotionChartID112d561737d19')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "motionchart";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartMotionChartID112d561737d19);
+})();
+function displayChartMotionChartID112d561737d19() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+
+<!-- jsChart -->  
+
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartMotionChartID112d561737d19"></script>
+ 
+
+<!-- divChart -->
+
+<div id="MotionChartID112d561737d19" 
+  style="width: 600; height: 500;">
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-9" style="background:;">
+  <hgroup>
+    <h2>Some cool examples</h2>
+  </hgroup>
+  <article data-timings="">
+    <h1>Interactive plots with googleVis</h1>
+
+<!-- GeoChart generated in R 3.1.1 by googleVis 0.5.3 package -->
+
+<!-- Sat Jul 12 23:52:23 2014 -->
+
+<!-- jsHeader -->
+
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataGeoChartID112d5651a264a () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ "Alabama",
+2.1 
+],
+[
+ "Alaska",
+1.5 
+],
+[
+ "Arizona",
+1.8 
+],
+[
+ "Arkansas",
+1.9 
+],
+[
+ "California",
+1.1 
+],
+[
+ "Colorado",
+0.7 
+],
+[
+ "Connecticut",
+1.1 
+],
+[
+ "Delaware",
+0.9 
+],
+[
+ "Florida",
+1.3 
+],
+[
+ "Georgia",
+2 
+],
+[
+ "Hawaii",
+1.9 
+],
+[
+ "Idaho",
+0.6 
+],
+[
+ "Illinois",
+0.9 
+],
+[
+ "Indiana",
+0.7 
+],
+[
+ "Iowa",
+0.5 
+],
+[
+ "Kansas",
+0.6 
+],
+[
+ "Kentucky",
+1.6 
+],
+[
+ "Louisiana",
+2.8 
+],
+[
+ "Maine",
+0.7 
+],
+[
+ "Maryland",
+0.9 
+],
+[
+ "Massachusetts",
+1.1 
+],
+[
+ "Michigan",
+0.9 
+],
+[
+ "Minnesota",
+0.6 
+],
+[
+ "Mississippi",
+2.4 
+],
+[
+ "Missouri",
+0.8 
+],
+[
+ "Montana",
+0.6 
+],
+[
+ "Nebraska",
+0.6 
+],
+[
+ "Nevada",
+0.5 
+],
+[
+ "New Hampshire",
+0.7 
+],
+[
+ "New Jersey",
+1.1 
+],
+[
+ "New Mexico",
+2.2 
+],
+[
+ "New York",
+1.4 
+],
+[
+ "North Carolina",
+1.8 
+],
+[
+ "North Dakota",
+0.8 
+],
+[
+ "Ohio",
+0.8 
+],
+[
+ "Oklahoma",
+1.1 
+],
+[
+ "Oregon",
+0.6 
+],
+[
+ "Pennsylvania",
+1 
+],
+[
+ "Rhode Island",
+1.3 
+],
+[
+ "South Carolina",
+2.3 
+],
+[
+ "South Dakota",
+0.5 
+],
+[
+ "Tennessee",
+1.7 
+],
+[
+ "Texas",
+2.2 
+],
+[
+ "Utah",
+0.6 
+],
+[
+ "Vermont",
+0.6 
+],
+[
+ "Virginia",
+1.4 
+],
+[
+ "Washington",
+0.6 
+],
+[
+ "West Virginia",
+1.4 
+],
+[
+ "Wisconsin",
+0.7 
+],
+[
+ "Wyoming",
+0.6 
+] 
+];
+data.addColumn('string','state.name');
+data.addColumn('number','Illiteracy');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartGeoChartID112d5651a264a() {
+var data = gvisDataGeoChartID112d5651a264a();
+var options = {};
+options["width"] =    600;
+options["height"] =    400;
+options["region"] = "US";
+options["displayMode"] = "regions";
+options["resolution"] = "provinces";
+
+    var chart = new google.visualization.GeoChart(
+    document.getElementById('GeoChartID112d5651a264a')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "geochart";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartGeoChartID112d5651a264a);
+})();
+function displayChartGeoChartID112d5651a264a() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+
+<!-- jsChart -->  
+
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartGeoChartID112d5651a264a"></script>
+ 
+
+<!-- divChart -->
+
+<div id="GeoChartID112d5651a264a" 
+  style="width: 600; height: 400;">
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-10" style="background:;">
+  <hgroup>
+    <h2>Before we get started...</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Download the latest version of R for your operating system</li>
+<li>Install R Studio</li>
+<li>Download the materials from ???</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Overview'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='What is R'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Why use R?'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='A major con...'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Some useful R packages for reference'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='Some cool examples'>
+         6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='Some cool examples'>
+         7
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title='Some cool examples'>
+         8
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title='Some cool examples'>
+         9
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='Before we get started...'>
+         10
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>

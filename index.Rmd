@@ -1,0 +1,129 @@
+---
+title       : An Introduction to R
+subtitle    : 
+author      : Dan Martin
+job         : 
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+github:
+  user: dpmartin42
+  repo: R-Workshop
+---
+
+## Overview
+
+1. What is R?
+
+2. Basic Commands
+
+3. Cleaning
+
+4. Plotting
+
+5. Reproducible Research 
+
+--- 
+
+## What is R
+# http://cran.r-project.org
+
+* A statistical language
+* A programming language
+* Object-oriented
+  * everything is an object in R
+
+--- 
+
+## Why use R?
+
+* It's free!
+* It's open source
+  * You can see, re-use, and modify code as needed
+* It's flexible
+* Access to > 5000 packages
+* Can easily create data products
+
+--- 
+
+## A major con...
+
+* It's tough!
+
+My goal today is to focus on *your* needs as applied researchers
+
+--- 
+
+## Some useful R packages for reference
+
+* Any type of general linear model: Base
+* Logistic Regression: glm
+* Structural equation modeling: OpenMx, lavaan
+* Multi-level models: lme4, nlme
+* Latent Class/Profile Analysis: poLCA, mClust
+* Survey Weights: survey
+* Propensity Scores: Matching, MatchIt
+* Multiple Imputation: mice
+* Graphics: ggplot
+
+--- 
+
+## Some cool examples
+# Interactive plots with Shiny
+
+[SPR Cup Global Health Project](https://dpmartin42.shinyapps.io/App-1/)
+
+--- 
+
+## Some cool examples
+# Interactive plots with Shiny
+
+[Dialect Maps](http://spark.rstudio.com/jkatz/SurveyMaps/)
+
+--- 
+
+## Some cool examples
+# Interactive plots with googleVis
+
+```{r, echo = FALSE, results = 'asis', message = FALSE}
+
+require(googleVis)
+
+M1 <- gvisMotionChart(Fruits, idvar="Fruit", timevar="Date")
+print(M1, tag = 'chart')
+
+```
+
+---
+
+## Some cool examples
+# Interactive plots with googleVis
+
+```{r, echo = FALSE, results = 'asis', message = FALSE}
+
+require(datasets)
+
+states <- data.frame(state.name, state.x77)
+M2 <- gvisGeoChart(states, "state.name", "Illiteracy",
+                          options=list(region="US", 
+                                       displayMode="regions", 
+                                       resolution="provinces",
+                                       width=600, height=400))
+
+print(M2, tag = 'chart')
+
+```
+
+---
+
+## Before we get started...
+
+1. Download the latest version of R for your operating system
+2. Install R Studio
+3. Download the materials from ???
+
+
+
