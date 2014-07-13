@@ -11,7 +11,7 @@ mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 github:
   user: dpmartin42
-  repo: R-Workshop
+  repo: R-Intro
 ---
 
 ## Overview
@@ -29,7 +29,9 @@ github:
 --- 
 
 ## What is R
-# http://cran.r-project.org
+
+
+Available at http://cran.r-project.org
 
 * A statistical language
 * A programming language
@@ -72,7 +74,7 @@ My goal today is to focus on *your* needs as applied researchers
 --- 
 
 ## Some cool examples
-# Interactive plots with Shiny
+## Interactive plots with Shiny
 
 [SPR Cup Global Health Project](https://dpmartin42.shinyapps.io/App-1/)
 
@@ -92,7 +94,7 @@ My goal today is to focus on *your* needs as applied researchers
 
 require(googleVis)
 
-M1 <- gvisMotionChart(Fruits, idvar="Fruit", timevar="Date")
+M1 <- gvisMotionChart(Fruits, idvar="Fruit", timevar="Date", options = list(width = 550, height = 350))
 print(M1, tag = 'chart')
 
 ```
@@ -111,7 +113,7 @@ M2 <- gvisGeoChart(states, "state.name", "Illiteracy",
                           options=list(region="US", 
                                        displayMode="regions", 
                                        resolution="provinces",
-                                       width=600, height=400))
+                                       width=550, height=350))
 
 print(M2, tag = 'chart')
 
