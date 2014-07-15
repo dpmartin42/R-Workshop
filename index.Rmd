@@ -51,6 +51,21 @@ Available at http://cran.r-project.org
 
 --- 
 
+## Why use R?
+
+* Look like a wizard
+
+```{r, echo = FALSE, fig.height = 6, fig.width = 4}
+
+library(png)
+library(grid)
+img <- readPNG("figure/wizard.png")
+grid.raster(img)
+
+```
+
+---
+
 ## A major con...
 
 * It's tough!

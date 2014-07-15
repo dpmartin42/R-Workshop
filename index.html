@@ -105,6 +105,21 @@
 
 <slide class="" id="slide-4" style="background:;">
   <hgroup>
+    <h2>Why use R?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Look like a wizard</li>
+</ul>
+
+<p><img src="figure/unnamed-chunk-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
     <h2>A major con...</h2>
   </hgroup>
   <article data-timings="">
@@ -118,7 +133,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-5" style="background:;">
+<slide class="" id="slide-6" style="background:;">
   <hgroup>
     <h2>Some useful R packages for reference</h2>
   </hgroup>
@@ -139,7 +154,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-6" style="background:;">
+<slide class="" id="slide-7" style="background:;">
   <hgroup>
     <h2>Some helpful R resources for reference</h2>
   </hgroup>
@@ -157,9 +172,9 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-7" style="background:;">
+<slide class="" id="slide-8" style="background:;">
   <hgroup>
-    <h2>R Examples: Interactive plots with Shiny</h2>
+    <h2>R Examples: Shiny</h2>
   </hgroup>
   <article data-timings="">
     <p><a href="https://dpmartin42.shinyapps.io/App-1/">SPR Cup Global Health Project</a></p>
@@ -170,21 +185,21 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-8" style="background:;">
+<slide class="" id="slide-9" style="background:;">
   <hgroup>
-    <h2>R Examples: Interactive plots with googleVis</h2>
+    <h2>R Examples: googleVis</h2>
   </hgroup>
   <article data-timings="">
     <!-- MotionChart generated in R 3.1.1 by googleVis 0.5.3 package -->
 
-<!-- Sun Jul 13 00:10:30 2014 -->
+<!-- Tue Jul 15 16:40:15 2014 -->
 
 <!-- jsHeader -->
 
 <script type="text/javascript">
  
 // jsData 
-function gvisDataMotionChartID1136647772f92 () {
+function gvisDataMotionChartID126d940c5c3d () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -282,14 +297,14 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartMotionChartID1136647772f92() {
-var data = gvisDataMotionChartID1136647772f92();
+function drawChartMotionChartID126d940c5c3d() {
+var data = gvisDataMotionChartID126d940c5c3d();
 var options = {};
 options["width"] =    550;
 options["height"] =    350;
 
     var chart = new google.visualization.MotionChart(
-    document.getElementById('MotionChartID1136647772f92')
+    document.getElementById('MotionChartID126d940c5c3d')
     );
     chart.draw(data,options);
     
@@ -313,9 +328,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartMotionChartID1136647772f92);
+callbacks.push(drawChartMotionChartID126d940c5c3d);
 })();
-function displayChartMotionChartID1136647772f92() {
+function displayChartMotionChartID126d940c5c3d() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -341,12 +356,12 @@ callbacks.shift()();
 
 <!-- jsChart -->  
 
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartMotionChartID1136647772f92"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartMotionChartID126d940c5c3d"></script>
  
 
 <!-- divChart -->
 
-<div id="MotionChartID1136647772f92" 
+<div id="MotionChartID126d940c5c3d" 
   style="width: 550; height: 350;">
 </div>
 
@@ -354,21 +369,21 @@ callbacks.shift()();
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-9" style="background:;">
+<slide class="" id="slide-10" style="background:;">
   <hgroup>
-    <h2>R Examples: Interactive plots with googleVis</h2>
+    <h2>R Examples: googleVis</h2>
   </hgroup>
   <article data-timings="">
     <!-- GeoChart generated in R 3.1.1 by googleVis 0.5.3 package -->
 
-<!-- Sun Jul 13 00:10:30 2014 -->
+<!-- Tue Jul 15 16:40:15 2014 -->
 
 <!-- jsHeader -->
 
 <script type="text/javascript">
  
 // jsData 
-function gvisDataGeoChartID1136661d43ee5 () {
+function gvisDataGeoChartID126d9477baade () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -580,8 +595,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartGeoChartID1136661d43ee5() {
-var data = gvisDataGeoChartID1136661d43ee5();
+function drawChartGeoChartID126d9477baade() {
+var data = gvisDataGeoChartID126d9477baade();
 var options = {};
 options["width"] =    550;
 options["height"] =    350;
@@ -590,7 +605,7 @@ options["displayMode"] = "regions";
 options["resolution"] = "provinces";
 
     var chart = new google.visualization.GeoChart(
-    document.getElementById('GeoChartID1136661d43ee5')
+    document.getElementById('GeoChartID126d9477baade')
     );
     chart.draw(data,options);
     
@@ -614,9 +629,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartGeoChartID1136661d43ee5);
+callbacks.push(drawChartGeoChartID126d9477baade);
 })();
-function displayChartGeoChartID1136661d43ee5() {
+function displayChartGeoChartID126d9477baade() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -642,12 +657,12 @@ callbacks.shift()();
 
 <!-- jsChart -->  
 
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartGeoChartID1136661d43ee5"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartGeoChartID126d9477baade"></script>
  
 
 <!-- divChart -->
 
-<div id="GeoChartID1136661d43ee5" 
+<div id="GeoChartID126d9477baade" 
   style="width: 550; height: 350;">
 </div>
 
@@ -655,7 +670,7 @@ callbacks.shift()();
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-10" style="background:;">
+<slide class="" id="slide-11" style="background:;">
   <hgroup>
     <h2>OK! Before we get started...</h2>
   </hgroup>
@@ -694,44 +709,50 @@ callbacks.shift()();
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='A major con...'>
+        data-slide=4 title='Why use R?'>
          4
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=5 title='Some useful R packages for reference'>
+        data-slide=5 title='A major con...'>
          5
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=6 title='Some helpful R resources for reference'>
+        data-slide=6 title='Some useful R packages for reference'>
          6
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=7 title='R Examples: Interactive plots with Shiny'>
+        data-slide=7 title='Some helpful R resources for reference'>
          7
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=8 title='R Examples: Interactive plots with googleVis'>
+        data-slide=8 title='R Examples: Shiny'>
          8
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=9 title='R Examples: Interactive plots with googleVis'>
+        data-slide=9 title='R Examples: googleVis'>
          9
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=10 title='OK! Before we get started...'>
+        data-slide=10 title='R Examples: googleVis'>
          10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='OK! Before we get started...'>
+         11
       </a>
     </li>
   </ul>

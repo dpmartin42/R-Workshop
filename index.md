@@ -51,6 +51,15 @@ Available at http://cran.r-project.org
 
 --- 
 
+## Why use R?
+
+* Look like a wizard
+
+![plot of chunk unnamed-chunk-1](figure/unnamed-chunk-1.png) 
+
+
+---
+
 ## A major con...
 
 * It's tough!
@@ -84,7 +93,7 @@ My goal today is to focus on *your* needs as applied researchers
 
 --- 
 
-## R Examples: Interactive plots with Shiny
+## R Examples: Shiny
 
 [SPR Cup Global Health Project](https://dpmartin42.shinyapps.io/App-1/)
 
@@ -92,17 +101,17 @@ My goal today is to focus on *your* needs as applied researchers
 
 --- 
 
-## R Examples: Interactive plots with googleVis
+## R Examples: googleVis
 
 <!-- MotionChart generated in R 3.1.1 by googleVis 0.5.3 package -->
-<!-- Sun Jul 13 00:10:30 2014 -->
+<!-- Tue Jul 15 16:40:15 2014 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataMotionChartID1136647772f92 () {
+function gvisDataMotionChartID126d940c5c3d () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -200,14 +209,14 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartMotionChartID1136647772f92() {
-var data = gvisDataMotionChartID1136647772f92();
+function drawChartMotionChartID126d940c5c3d() {
+var data = gvisDataMotionChartID126d940c5c3d();
 var options = {};
 options["width"] =    550;
 options["height"] =    350;
 
     var chart = new google.visualization.MotionChart(
-    document.getElementById('MotionChartID1136647772f92')
+    document.getElementById('MotionChartID126d940c5c3d')
     );
     chart.draw(data,options);
     
@@ -231,9 +240,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartMotionChartID1136647772f92);
+callbacks.push(drawChartMotionChartID126d940c5c3d);
 })();
-function displayChartMotionChartID1136647772f92() {
+function displayChartMotionChartID126d940c5c3d() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -257,28 +266,28 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartMotionChartID1136647772f92"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartMotionChartID126d940c5c3d"></script>
  
 <!-- divChart -->
   
-<div id="MotionChartID1136647772f92" 
+<div id="MotionChartID126d940c5c3d" 
   style="width: 550; height: 350;">
 </div>
 
 
 ---
 
-## R Examples: Interactive plots with googleVis
+## R Examples: googleVis
 
 <!-- GeoChart generated in R 3.1.1 by googleVis 0.5.3 package -->
-<!-- Sun Jul 13 00:10:30 2014 -->
+<!-- Tue Jul 15 16:40:15 2014 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataGeoChartID1136661d43ee5 () {
+function gvisDataGeoChartID126d9477baade () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -490,8 +499,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartGeoChartID1136661d43ee5() {
-var data = gvisDataGeoChartID1136661d43ee5();
+function drawChartGeoChartID126d9477baade() {
+var data = gvisDataGeoChartID126d9477baade();
 var options = {};
 options["width"] =    550;
 options["height"] =    350;
@@ -500,7 +509,7 @@ options["displayMode"] = "regions";
 options["resolution"] = "provinces";
 
     var chart = new google.visualization.GeoChart(
-    document.getElementById('GeoChartID1136661d43ee5')
+    document.getElementById('GeoChartID126d9477baade')
     );
     chart.draw(data,options);
     
@@ -524,9 +533,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartGeoChartID1136661d43ee5);
+callbacks.push(drawChartGeoChartID126d9477baade);
 })();
-function displayChartGeoChartID1136661d43ee5() {
+function displayChartGeoChartID126d9477baade() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -550,11 +559,11 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartGeoChartID1136661d43ee5"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartGeoChartID126d9477baade"></script>
  
 <!-- divChart -->
   
-<div id="GeoChartID1136661d43ee5" 
+<div id="GeoChartID126d9477baade" 
   style="width: 550; height: 350;">
 </div>
 
