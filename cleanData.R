@@ -5,7 +5,6 @@
 #
 # This script will outline popular tools in R to clean your datasets
 
-
 rm(list = ls())
 
 # ---------------------------------------------------------------------
@@ -57,6 +56,7 @@ list.files()
 ?read.csv
 
 myData <- read.csv("iris.csv", header = TRUE)
+class(myData)
 
 # Print the dataset
 
@@ -126,14 +126,99 @@ speciesColor
 newData <- merge(myData, speciesColor, by = "Species")
 summary(newData)
 
-# We can also create data summaries by group if we would like 
+# ---------------------------------------------------------------------
+# PART 4: TIDYING DATA
+# ---------------------------------------------------------------------
 
-# install.packages("doBy")
-require(doBy)
+# This section will cover cleaning data in the context of Hadley Wickham's
+# tidy data paper (http://vita.had.co.nz/papers/tidy-data.pdf) 
+# and dplyr package
 
-summaryBy(Sepal.Length ~ Species, data = myData, FUN = c(mean, sd))
+# install.packages('dplyr')
+require(dplyr)
 
+(df <- tbl_df(iris))
 
+class(df)
+
+# dplyr has 5 main functions: filter, select, arrange, mutate, and summarise
+
+######################################
+# filter: keep rows matching criteria
+
+# Select row values:
+
+df[df$Species == 'setosa', ]
+
+# Using filter intead: 
+
+filter(df, Species == 'setosa')
+
+######################################
+# select: pick columns by name
+
+# Select columns:
+
+df[, c("Sepal.Width", "Species")]
+
+# Using select:
+
+select(df, c(Sepal.Width, Species))
+select(df, c(Sepal.Width:Species))
+select(df, -c(Sepal.Width:Species))
+
+######################################
+# arrange: reorder rows
+
+# Reorder rows
+
+df[order(df$Sepal.Length), ]
+df[order(df$Sepal.Length, df$Petal.Length), ]
+
+# Using arrange:
+
+arrange(df, Sepal.Length)
+arrange(df, Sepal.Length, Petal.Length)
+arrange(df, desc(Sepal.Length))
+
+######################################
+# mutate: add new variables
+
+df$sum1 <- df$Sepal.Length + df$Sepal.Width
+df$sum1 <- with(df, Sepal.Length + Sepal.Width)
+  
+mutate(df, sum2 = Sepal.Length + Sepal.Width)
+
+######################################
+# summarise: reduce variables to values
+
+by_Species <- group_by(df, Species)
+
+summarise(by_Species,
+          Sepal.Length_mean = mean(Sepal.Length),
+          Sepal.Width_mean = mean(Sepal.Width))
+
+#######################################
+# pipes: connecting dplyr functions
+
+# Let's filter df so we only have flowers with > 6 Sepal.Length and > 3 Sepal.Width
+# Then, we want to get the mean of these flowers' Sepal.Length by Species
+
+# One way
+
+summarise(
+  group_by(
+    filter(df, Sepal.Length > 6, Sepal.Width > 3),
+    Species),
+  Sepal.Length_mean = mean(Sepal.Length)
+)
+
+# OR use the pipe operator (%>%) - read it as "then"
+# x %>% f(y) -> f(x, y)
+
+filter(df, Sepal.Length > 6, Sepal.Width > 3) %>%
+  group_by(Species) %>%
+  summarise(Sepal.Length_mean = mean(Sepal.Length))
 
 
 
