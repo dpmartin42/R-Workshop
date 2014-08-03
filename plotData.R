@@ -142,3 +142,36 @@ q + labs(x = "x-axis", y = "y-axis")
 
 q + theme(text = element_text(size=20))
 
+# Save the plot (with given dimensions) as a pdf in your working
+# directory. Don't forget dev.off()!
+
+pdf("test_plot.pdf", width = 6, height = 5)
+q
+dev.off()
+
+# ---------------------------------------------------------------------
+# PART 3: TEST YOUR KNOWLEDGE
+# ---------------------------------------------------------------------
+
+# Your mission, should you choose to accept it, is to use the babynames
+# package to examine the popularity of your name over time in the United
+# States. Use google and each other for help. You'll need to:
+
+# 1) Install the babynames package
+# 2) Use dplyr functions to create a new dataset of just the data you need
+# 3) Draw a plot with time on the x-axis and proportion on the y-axis
+# 4) Figure out how to change font sizes, label names, etc. to customize
+#    the theme of the plot
+# 5) Save the plot as a pdf
+# 6) Who in the room has the most popular name? The least popular?
+# 7) Optional: Print the plot, put it on your fridge, and show all
+#    your friends. You'll automatically become the 'cool one' of 
+#    the group. Trust me.  
+
+
+
+
+
+
+
+
